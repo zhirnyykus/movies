@@ -11,13 +11,13 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://www.omdbapi.com/?apikey=4eb9d7fd&s=matrix")
+    fetch("https://www.omdbapi.com/?apikey=4eb9d7fd&s=matrix")
       .then(response => response.json())
       .then(data => this.setState({ movies: data.Search }))
   }
 
   searchMovie = (str) => {
-    fetch(`http://www.omdbapi.com/?apikey=4eb9d7fd&s=${str}`)
+    fetch(`https://www.omdbapi.com/?apikey=4eb9d7fd&s=${str}`)
       .then(response => response.json())
       .then(data => this.setState({ movies: data.Search }))
   }
